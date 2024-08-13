@@ -39,7 +39,7 @@ function Kist() {
       <Skill name="JavaScript" emoji="💪💪" color="Yellow" />
       <Skill name="Web Design" emoji="💪💪" color="LightBlue" />
       <Skill name="vercel app" emoji="💪💪" color="green" />
-      <Skill name="gib and github" emoji="💪💪" color="LightGreen" />
+      <Skill name="gib and github dslf" emoji="💪💪" color="LightGreen" />
     </div>
   );
 }

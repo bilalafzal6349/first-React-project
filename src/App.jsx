@@ -1,5 +1,13 @@
 import "./App.css";
 
+const skills = [
+  { skills: "HTML + CSS", level: "Advanced", color: "#2662EA" },
+  { skills: "Javascript", level: "Advanced", color: "#EEE" },
+  { skills: "Web Design", level: "Advanced", color: "#C3DCAF" },
+  { skills: "Git and GitHub", level: "Intermediate", color: "#E84F33" },
+  { skills: "React", level: "Advanced", color: "#60DAFB" },
+  { skills: "Svelte", level: "Beginner", color: "#FF3B00" },
+];
 function App() {
   return (
     <div className="card">
@@ -12,12 +20,7 @@ function App() {
   );
 }
 function Avater() {
-  return (
-    <img
-      className="avatar"
-      src="../public//Untitled (717 × 368 px) (300 × 200 px).png"
-    />
-  );
+  return <img className="avatar" src="../public/pic.png" />;
 }
 function Intro() {
   return (
@@ -34,21 +37,18 @@ function Intro() {
 function Kist() {
   return (
     <div className="skill-list">
-      <Skill name="React" emoji="💪💪 " color="orange" />
-      <Skill name="HTML + CSS" emoji="💪💪" color="orangeRed" />
-      <Skill name="JavaScript" emoji="💪💪" color="Yellow" />
-      <Skill name="Web Design" emoji="💪💪" color="LightBlue" />
-      <Skill name="vercel app" emoji="💪💪" color="green" />
-      <Skill name="git and github" emoji="💪💪" color="LightGreen" />
+      {skills.map(({ color, skills, level }) => (
+        <div className="skill" key={skills} style={{ background: color }}>
+          <span>{skills}</span>
+          <span>
+            {level === "Beginner" ? "👶" : ""}
+            {level === "Intermediate" && "👍"}
+            {level === "Advanced" && "💪"}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }
-function Skill(props) {
-  return (
-    <div className="skill" style={{ background: props.color }}>
-      <span>{props.name}</span>
-      <span>{props.emoji}</span>
-    </div>
-  );
-}
+
 export default App;

@@ -20,7 +20,7 @@ function App() {
   );
 }
 function Avater() {
-  return <img className="avatar" src="../public/pic.png" />;
+  return <img className="avatar" src="./assets/pic.png" />;
 }
 function Intro() {
   return (

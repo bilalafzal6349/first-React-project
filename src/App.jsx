@@ -1,4 +1,5 @@
 import "./App.css";
+import Img from "./assets/pic.png";
 
 const skills = [
   { skills: "HTML + CSS", level: "Advanced", color: "#2662EA" },
@@ -20,7 +21,7 @@ function App() {
   );
 }
 function Avater() {
-  return <img className="avatar" src="./assets/pic.png" />;
+  return <img className="avatar" src={Img} />;
 }
 function Intro() {
   return (
